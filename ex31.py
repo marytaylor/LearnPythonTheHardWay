@@ -30,5 +30,26 @@ elif door == "2":
     else:
         print "The insanity rots your eyes into a pool of muck. Good job!"
 
+elif door == "up":
+    print """You see a rope ladder dangling above your head.  You cannot tell if
+    it goes anywhere as you just see darkness further up.  Do you go up?
+    """
+
+    decision = raw_input("> ")
+
+    if decision == "up":
+        print """You start to climb up but continue to see darkness. Continue
+        to climb up?"""
+
+        yes_no = raw_input("Yes or No?: ")
+        # "if yes_no == ("yes" or "Yes" or "YES")" did not work.
+        if yes_no == "yes" or yes_no == "Yes" or yes_no == "YES":
+            print """You find a light at the end of the tunnel and escape! You
+            win, Congrats!"""
+        else:
+            print """You fall to your death and rats eat your body."""
+    else:
+        print "You fall to the ground, fall on a knife and die. Too bad..."
+
 else:
     print "You stumble around and fall on a knife and die. Good job!"
