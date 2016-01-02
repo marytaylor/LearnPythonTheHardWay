@@ -60,9 +60,9 @@ def gum():
     print "You check your pockets and there is a piece of bubblegum."
     print "(ﾉﾟ0ﾟ)ﾉ Yum!"
     print "You chew the piece of gum."
+# Need to fix error "AttributeError: 'function' object has no attribute 'remove'"
     inventory.remove('gum')
 
-# Getting an error and need to resolve: http://eli.thegreenplace.net/2011/05/15/understanding-unboundlocalerror-in-python
 def escape():
     decide5 = raw_input("> ")
     if "run" in decide5:
@@ -126,3 +126,5 @@ def end2():
 
 print "You wake up in a small dark area."
 start()
+
+# Resolved error with help from this http://eli.thegreenplace.net/2011/05/15/understanding-unboundlocalerror-in-python
