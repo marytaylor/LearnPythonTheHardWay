@@ -2,8 +2,6 @@
 # -*- coding: iso-8859-15 -*-
 import os, sys
 
-inventory = ['gum']
-
 def start():
     print "Your arms are tied behind you."
     print "What do you do now?"
@@ -61,11 +59,11 @@ def gum():
     print "(ﾉﾟ0ﾟ)ﾉ Yum!"
     print "You chew the piece of gum."
 # Need to fix error "AttributeError: 'function' object has no attribute 'remove'"
-    inventory.remove('gum')
+    inventory.pop('gum')
 
 def escape():
     decide5 = raw_input("> ")
-    if "run" in decide5:
+    if "run" or "move" in decide5:
         print "You start to run down to the bottom of the parking garage."
         end_of_line()
     elif "motorcycle" in decide5:
@@ -113,7 +111,7 @@ def end_of_line():
         print "I don't understand that input."
 
 def inventory():
-    inventory = ['gum']
+    inventory = ['gum', 'car', 'motorcycle']
     print "Heres whats your inventory:"
     for item in inventory:
         print item
